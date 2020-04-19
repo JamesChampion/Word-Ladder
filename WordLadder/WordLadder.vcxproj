@@ -153,9 +153,11 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">preCompilerHeader.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)$(TargetName)$(Platform).pch</PrecompiledHeaderOutputFile>
     </ClCompile>
+    <ClCompile Include="WordLadder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="preCompilerHeader.h" />
+    <ClInclude Include="WordLadder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
