@@ -159,6 +159,13 @@
     <ClInclude Include="preCompilerHeader.h" />
     <ClInclude Include="WordLadder.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Test_Files\OWL.txt" />
+    <Text Include="..\Test_Files\Small.txt" />
+    <Text Include="..\Test_Files\SOWPODS.txt" />
+    <Text Include="..\Test_Files\Tiny.txt" />
+    <Text Include="..\Test_Files\Words.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

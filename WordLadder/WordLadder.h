@@ -32,7 +32,6 @@ public:
 	// 
 	WordLadder(const string& dictionaryFilePath, const int& lengthOfWord);
 
-
 	//---------------------------------------------------------------------------------------------
 	// Returns a minimum-length word ladder from start to end. If multiple minimum-length
 	// word ladders exist, no guarantee is made regarding which one is returned. If no word
@@ -44,8 +43,8 @@ public:
 	// end      the ending word
 	// returns  a minimum length word ladder from start to end
 	//
-	vector<string> getMinimumLadder(const string& start, const string& end);
 
+	vector<string> getMinLadder(string& startingWord, string& endingWord);
 
 	//---------------------------------------------------------------------------------------------
 	// Returns the total number of words in the current lexicon.
@@ -66,23 +65,25 @@ private:
 	set<string> dictionary;    // The dictionary
 
 
+	// Description: Initalizes the dictionary used to look up valid words.  This dictionary only stores words of the same length as input parameters
+	// Parameters: dictionaryFilePath <string&> lengthOfWord <int&>
+	// Returns: void
 	void intializeDictionary(const string& dictionaryFilePath, const int& lengthOfWord);
 
 	//---------------------------------------------------------------------------------------------
 	// Returns the location within the vector of the given string; returns -1 if not found
 	//
 	//
-	int findInVector(const vector<string>& vector, const string& inputString);
+	int findInVector(const vector<string>& vector, const string& word);
 
 
 	//---------------------------------------------------------------------------------------------
 	// Checks to see if the given string is a word.
 	// 
-	// str      the string to check
-	// returns  true if str is a word, false otherwise
+	// inputString      the string to check
+	// returns  true if inputString is in the dictionary, false otherwise
 	// 
 	bool isWord(const string& inputString);
-
 
 	//---------------------------------------------------------------------------------------------
 	// Checks to see if the given sequence of strings is a valid word ladder.
@@ -108,10 +109,15 @@ private:
 	// are different. The Hamming distance is undefined if the strings have different lengths, and this
 	// method must return -1 in that case. See https://en.wikipedia.org/wiki/Hamming_distance for more
 	//
-	// str1    the first string
-	// str2    the second string
+	// string1    the first string
+	// string2    the second string
 	// returns the Hamming distance between str1 and str2 if they are the same length, -1 otherwise
 	//
 	int getHammingDistance(const string& string1, const string& string2);
+
+	// Description: Converts a word to upper case
+	// Parameters: inputString<string&>
+	// Returns: Uppercase string <string&>
+	string convertToUpperCase(string& inputString);
 
 };
