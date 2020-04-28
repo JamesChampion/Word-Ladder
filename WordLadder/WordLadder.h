@@ -62,7 +62,7 @@ public:
 
 private:
 
-	set<string> dictionary;    // The dictionary
+	set<string> dictionary; 
 
 
 	// Description: Initalizes the dictionary used to look up valid words.  This dictionary only stores words of the same length as input parameters

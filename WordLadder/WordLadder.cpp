@@ -1,3 +1,12 @@
+// File Name: WordLadder.cpp
+// Date: April 26,2020
+// Course: EECS 2510-001
+// Author: James Champion
+// Description: Implementation of WordLadder.h
+//				Given a starting word and ending word, a word ladder is 
+//				a sequence of valid words that have a hamming distance of 1 
+//				Example (ape,man): ape-ale-all-aal-mal-man
+
 #include "preCompilerHeader.h"
 #include "WordLadder.h"
 
